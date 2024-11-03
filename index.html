@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agoodshop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body class="bg-black flex flex-col min-h-screen">
+    
+    <section class="my-8 text-center">
+        <h1 class="text-4xl font-bold text-white">Agoodshop</h1>
+    </section>
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-6 flex-grow bg-gray-100">
+       
+        <section class="mb-12 bg-[#252525] p-4">
+            <h2 class="text-2xl font-semibold text-white mb-4">Carrito de Compras</h2>
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border">SKU</th>
+                        <th class="py-2 px-4 border">Nombre</th>
+                        <th class="py-2 px-4 border">Precio</th>
+                        <th class="py-2 px-4 border">Unidades</th>
+                        <th class="py-2 px-4 border">Total</th>
+                        <th class="py-2 px-4 border">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-table-body">
+                    <!-- Aquí se añadirán los productos en el carrito -->
+                </tbody>
+            </table>
+            
+            <div id="cart-summary" class="mt-4">
+                <p class="text-white mb-4">Total del Carrito: <span id="total-cart" class="font-bold text-green-500">0 €</span></p>
+                <button id="boton-pagar" class="bg-green-500 text-white font-semibold px-4 py-2 rounded hover:bg-green-600 mx-2">Pagar</button>
+                <button id="boton-vaciar" class="bg-yellow-500 text-white font-semibold px-4 py-2 rounded hover:bg-yellow-600 mx-2">Vaciar Carrito</button>
+            </div>
+        </section>
+        
+        <!-- Lista de productos de la API -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Lista de Productos</h2>
+            <div id="product-list">
+                <!-- Aquí se cargarán los productos de la API -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4 text-center w-full">
+        <div class="flex justify-center space-x-6">
+            <a href="https://github.com/diegoarnanz-maker" target="_blank" class="text-white transition duration-300 ease-in-out hover:text-gray-400">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://diegoarnanz-maker-portfolio.netlify.app/" target="_blank" class="text-white transition duration-300 ease-in-out hover:text-gray-400">
+                <i class="fas fa-globe"></i> Portafolio
+            </a>
+        </div>
+        <p class="mt-2">©Agoodshop. Diego-maker</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/carrito.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dom.js"></script>
+
+</body>
+</html>
